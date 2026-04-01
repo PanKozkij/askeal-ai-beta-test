@@ -2,7 +2,7 @@
 
 **Document Type**: Test Strategy  
 **Project**: Askeal AI — LLM Chatbot (Closed Beta)  
-**Author**: PanKozkij — Junior QA Engineer  
+**Author**: Oleh Yushchenko — Junior QA Engineer  
 **Version**: 1.0  
 **Date**: April 2026  
 
