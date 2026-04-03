@@ -79,29 +79,26 @@
 ---
 
 ## ⚠️ Risks & Critical Checks
-🔴 CRITICAL: Suggestions don't populate input field
-🟡 Suggestions auto-send (bad UX)
-🟡 Broken/missing suggestion text
-🟢 Visual feedback missing (hard to use)
 
-text
+- 🔴 **Suggestions don't populate input field**
+- 🔴 **Suggestions auto-send on click** (bad UX)<br>
+- 🔴 **Broken/missing suggestion text**<br>
+- 🟡 **Visual feedback missing** (hard to use)<br>
 
 **Expected Behavior**:
-✅ Click → Input field filled, NOT sent
-✅ Editable text in input field
-✅ Send button enabled
-✅ Normal chat flow continues
-✅ Suggestions reappear on empty state
-
-text
+- ✅ Click → Input field filled, **NOT** sent
+- ✅ Editable text in input field  
+- ✅ Send button enabled
+- ✅ Normal chat flow continues
+- ✅ Suggestions reappear on empty state
 
 **Test Execution Notes**:
-Verify suggestions are RELEVANT to chatbot purpose
+- Verify suggestions are RELEVANT to chatbot purpose
 
-Test ALL suggestions individually
+- Test ALL suggestions individually
 
-Check mobile responsiveness (DevTools)
+- Check mobile responsiveness (DevTools)
 
-Verify NO auto-send on click (common UX mistake)
+- Verify NO auto-send on click (common UX mistake)
 
-Test interaction with normal typing flow
+- Test interaction with normal typing flow
