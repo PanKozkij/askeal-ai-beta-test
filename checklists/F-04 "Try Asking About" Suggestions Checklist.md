@@ -3,7 +3,7 @@
 **Test Suite**: Functional Testing  
 **Priority**: Medium  
 **Status**: ⏳ Not Executed  
-**Tester**: PanKozkij  
+**Tester**: Oleh Yushchenko  
 **Date**: April 2026  
 **Browser**: Chrome 130+
 
