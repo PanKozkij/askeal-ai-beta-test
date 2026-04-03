@@ -89,7 +89,8 @@ text
 - ✅ Input field → empty + focused
 - ✅ UI state → Day/Night mode preserved
 - ✅ Ready for new message immediately
-- 
+
+  
 **Test Execution Notes**:
 - Test with REAL conversation history (not screenshots)
 
