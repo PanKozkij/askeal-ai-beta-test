@@ -78,21 +78,18 @@ text
 ---
 
 ## ⚠️ Risks & Critical Checks
-🔴 CRITICAL: Session loss = fatal UX issue
-🔴 CRITICAL: Data loss after refresh = showstopper
-🟡 Input field focus after restore
-🟢 Scroll position (should go to bottom)
+- 🔴 CRITICAL: Session loss = fatal UX issue
+- 🔴 CRITICAL: Data loss after refresh = showstopper
+- 🟡 Input field focus after restore
+- 🟢 Scroll position (should go to bottom)
 
-text
 
 **Expected Behavior**:
-✅ Refresh → FULL conversation history preserved
-✅ Input field → empty + focused
-✅ UI state → Day/Night mode preserved
-✅ Ready for new message immediately
-
-text
-
+- ✅ Refresh → FULL conversation history preserved
+- ✅ Input field → empty + focused
+- ✅ UI state → Day/Night mode preserved
+- ✅ Ready for new message immediately
+- 
 **Test Execution Notes**:
 - Test with REAL conversation history (not screenshots)
 
