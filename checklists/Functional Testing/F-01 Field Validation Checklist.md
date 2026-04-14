@@ -12,42 +12,42 @@
 ## ✅ Field Validation Scenarios
 
 ### 1. Empty Input
-- [ ] Input field accepts empty state (no crash)
-- [ ] **Send** button disabled OR shows error on click
-- [ ] Clear error message: "Message cannot be empty" / similar
-- [ ] Error disappears when user types
+- [x] Input field accepts empty state (no crash)
+- [x] **Send** button disabled OR shows error on click
+- [x] Clear error message: "Message cannot be empty" / similar
+- [x] Error disappears when user types
 
 ### 2. Valid Input (Positive)
-- [ ] Short message (1-50 chars): `"Hello"`
-- [ ] Medium message (100-500 chars)
-- [ ] Long message (~4000 chars)
-- [ ] Message sends successfully
-- [ ] Appears correctly in chat history
+- [x] Short message (1-50 chars): `"Hello"`
+- [x] Medium message (100-500 chars)
+- [x] Long message (~4000 chars)
+- [x] Message sends successfully
+- [x] Appears correctly in chat history
 
 ### 3. Maximum Length (Boundary)
-- [ ] **4096 chars** → accepted OR shows counter
-- [ ] **4097+ chars** → warning OR truncation
-- [ ] Long message sends OR blocked with clear message
-- [ ] Character limit behavior consistent
+- [x] **4096 chars** → accepted OR shows counter
+- [x] **4097+ chars** → warning OR truncation
+- [x] Long message sends OR blocked with clear message
+- [x] Character limit behavior consistent
 
 ### 4. Special Characters
-- [ ] **Punctuation**: `<>@#$%^&*()_+=`
-- [ ] **Emojis**: 😀🚀✅📱
-- [ ] All characters render correctly in chat
-- [ ] No XSS/escape issues
+- [x] **Punctuation**: `<>@#$%^&*()_+=`
+- [x] **Emojis**: 😀🚀✅📱
+- [x] All characters render correctly in chat
+- [x] No XSS/escape issues
 
 ### 5. Edge Cases
-- [ ] **Leading spaces**: `"   hello"`
-- [ ] **Trailing spaces**: `"hello   "`
-- [ ] **Spaces trimmed** OR preserved consistently
-- [ ] **Copy-paste** (Ctrl+V) from external source
-- [ ] **Paste formatted text** (bold/italic from Word)
+- [x] **Leading spaces**: `"   hello"`
+- [x] **Trailing spaces**: `"hello   "`
+- [x] **Spaces trimmed** OR preserved consistently
+- [x] **Copy-paste** (Ctrl+V) from external source
+- [x] **Paste formatted text** (bold/italic from Word)
 
 ### 6. Invalid Input Handling
-- [ ] **Only spaces**: `"       "` → validation error
-- [ ] **Tab characters** → handled correctly
-- [ ] **Newline characters** (Ctrl+Enter) → handled
-- [ ] **Very long single line** → wraps OR scrolls
+- [x] **Only spaces**: `"       "` → validation error
+- [x] **Tab characters** → handled correctly
+- [x] **Newline characters** (Ctrl+Enter) → handled
+- [x] **Very long single line** → wraps OR scrolls
 
 ---
 
