@@ -51,20 +51,35 @@
 
 ---
 
-## 📊 Execution Summary
+## 📊 Execution Summary (F-01 — Field Validation)
 
-| Scenario | Status | Notes | Screenshot |
-|----------|--------|-------|------------|
-| Empty Input | ⏳ | | |
-| Valid Input | ⏳ | | |
-| Max Length | ⏳ | | |
-| Special Chars | ⏳ | | |
-| Edge Cases | ⏳ | | |
-| Invalid Input | ⏳ | | |
+| Scenario                               | Status  | Notes                                 | Runs Tested |
+|----------------------------------------|---------|---------------------------------------|------------|
+| Empty Input                            | ✅ Pass | Input blocked with clear validation   | 1 |
+| Max Length Boundary                    | ✅ Pass | Max length accepted without errors    | 1 |
+| Over Max Length Rejected               | ✅ Pass | User sees friendly error message      | 1 |
+| Special Characters & Emojis            | ✅ Pass | Handled safely, no crashes/HTML issues| 1 |
+| Leading/Trailing Spaces                | ✅ Pass | Trimmed/handled correctly             | 1 |
+| Non-Latin Characters (UA/ES letters)   | ✅ Pass | Accepted and processed correctly      | 1 |
 
-**Total Tests**: 6 scenarios, 25+ checks  
-**Pass Rate**: ⏳ Not calculated
+**Total Checks**: 6  
+**Pass Rate**: 100%
 
+---
+
+## ✅ Expected Behavior
+
+✅ All field validation rules worked as designed (empty, max length, over-limit, and special characters).  
+✅ No crashes, layout breaks, or raw error messages were observed.  
+✅ User-facing validation messages were clear and understandable.
+
+---
+
+## 📝 Test Execution Notes
+
+- F-01 Field Validation checklist was executed successfully.  
+- All checks passed; no bugs were found.  
+- Evidence (prompts, screenshots or detailed notes) can be referenced in the Test Summary Report and regression scope.
 ---
 
 ## ⚠️ Risks & Notes
