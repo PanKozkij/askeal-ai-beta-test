@@ -2,7 +2,7 @@
 
 **Test Suite**: Functional Testing  
 **Priority**: High  
-**Status**: ⏳ Not Executed  
+**Status**: ✅ Complete  
 **Tester**: Oleh Yushchenko  
 **Date**: April 2026  
 **Browser**: Chrome 130+
