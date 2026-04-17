@@ -2,7 +2,7 @@
 
 **Test Suite**: Functional Testing  
 **Priority**: High  
-**Status**: ⏳ Not Executed  
+**Status**: ✅ Pass 
 **Tester**: Oleh Yushchenko  
 **Date**: April 2026  
 **Browser**: Chrome 130+
@@ -83,10 +83,25 @@
 - 🟢 Filename sanitization (path traversal)
 
 
-**Expected Behaviors**:
-- ✅ Supported: PNG/JPG/PDF/DOCX/TXT (<25MB)
-- ❌ Blocked: EXE/BAT/JS/HTML/SCR (>25MB)
+## ✅ Expected Behavior
 
+✅ The file upload control accepts **supported formats** (e.g., text, images, PDFs) within the allowed size limit and completes without UI errors.  
+✅ Unsupported formats (e.g., `.exe`, unexpected script files) are **rejected** with a clear, user‑friendly message explaining that the file type is not allowed.  
+✅ Files that exceed the configured **size limit** are blocked early, with an explicit message about maximum allowed size; no partial or corrupted files are stored.  
+✅ Temporary **network issues** during upload are handled gracefully: the UI shows an error or timeout state instead of hanging in “loading…”, and the user can retry.  
+✅ Multiple valid files uploaded sequentially do **not degrade performance** or break the interface; each upload finishes and is available for further actions as expected.  
+✅ During uploads, the UI provides clear **visual feedback** (spinner/progress indicator and final success/error state), so the user always understands what is happening.
+
+---
+
+## 📝 Test Execution Notes
+
+- All **F-02** scenarios from the checklist were executed: valid upload, invalid format, oversize file, network error during upload, multiple valid uploads, and UI feedback checks.  
+- For **valid format** verification, a small text file and a PNG image were used as representative supported file types and both uploaded successfully.  
+- For **negative cases**, an invalid/unsupported file type and oversize file were used; the application correctly displayed validation messages and did not store corrupted data.  
+- Network‑related behavior was checked by interrupting the upload and observing that the UI surfaced an error and allowed a safe retry without getting stuck.  
+- Due to platform limitations, only **one evidence file** can be attached per submission; additional files used during testing (extra text/PNG/invalid samples) are documented here but not all attached.  
+- No defects were found for F-02 in this run; results and evidence are referenced in the overall Test Summary Report and can be reused for regression in future Askeal AI builds.
 
 **Environment Notes**:
 Closed beta - no screenshots
