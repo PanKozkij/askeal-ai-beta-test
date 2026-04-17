@@ -1,9 +1,9 @@
 # F-01 Field Validation Checklist
 
 **Test Suite**: Functional Testing  
-**Priority**: High  
-**Status**: ✅ Pass
-**Tester**: Oleh Yushchenko  
+**Priority**: High  <br>
+**Status**: ✅ Pass <br>
+**Tester**: Oleh Yushchenko <br> 
 **Date**: April 2026  
 **Browser**: Chrome 130+
 
