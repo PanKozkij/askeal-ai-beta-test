@@ -84,10 +84,10 @@
 
 ## ⚠️ Risks & Notes
 
-🔴 CRITICAL: XSS vulnerability from special chars
-🟡 Input sanitization may break Ukrainian text
-🟠 No character counter → UX issue for long prompts
-🟢 Spaces trimming behavior must be consistent
+🔴 CRITICAL: XSS vulnerability from special chars <br>
+🟡 Input sanitization may break Ukrainian text <br>
+🟠 No character counter → UX issue for long prompts <br>
+🟢 Spaces trimming behavior must be consistent <br>
 
 **Environment Notes**:
 
