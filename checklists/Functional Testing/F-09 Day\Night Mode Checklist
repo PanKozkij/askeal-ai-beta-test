@@ -1,0 +1,140 @@
+# F-09 Day/Night Mode Checklist
+
+**Test Suite**: Functional Testing  
+**Priority**: Medium  
+**Status**: ⏳ Not Executed  
+**Tester**: Oleh Yushchenko  
+**Date**: April 2026  
+**Browsers**: Chrome 130+ (primary), Firefox, Safari
+
+---
+
+## ✅ Day/Night Mode Scenarios
+
+### 1. Toggle Visibility & Basic Toggle Behavior
+
+- [ ] Day/Night mode toggle is **visible** in the main UI
+- [ ] Toggle is **enabled** (clickable) in default state
+- [ ] Clicking toggle switches from **Day → Night** theme
+- [ ] Clicking again switches from **Night → Day** theme
+- [ ] No console errors or layout breaks on toggle
+
+---
+
+### 2. Visual Changes (Main Page)
+
+- [ ] Background color changes according to selected mode
+- [ ] Text remains **readable** in both Day and Night modes
+- [ ] Buttons and inputs remain clearly visible and usable
+- [ ] Links and hover states are visible in both modes
+- [ ] No elements remain in “old” theme (mixed styles)
+
+---
+
+### 3. Chat Area & Messages
+
+- [ ] Chat background updates to match selected theme
+- [ ] User and bot messages stay readable (no low-contrast text)
+- [ ] Timestamps, avatars, and system messages remain visible
+- [ ] Code blocks / formatted responses are legible in both modes
+
+---
+
+### 4. Persistence After Page Refresh
+
+- [ ] Switch to **Night** mode, then refresh page
+- [ ] Night mode remains active after refresh
+- [ ] Switch back to **Day** mode, refresh again
+- [ ] Day mode remains active after refresh
+- [ ] No “flash” of wrong theme during load (if possible to check)
+
+---
+
+### 5. Persistence Across Navigation (If Multiple Pages)
+
+- [ ] Enable Night mode on main chat page
+- [ ] Navigate to another in-scope page (e.g., settings / info)
+- [ ] Theme is still **Night** on the new page
+- [ ] Navigate back to chat page → theme still consistent
+
+---
+
+### 6. New Session Behavior
+
+- [ ] Close tab/browser completely
+- [ ] Reopen Askeal AI
+- [ ] Confirm behavior matches expected product decision:
+  - Either theme persists between sessions **or**
+  - Mode resets to default and this is documented
+- [ ] No inconsistent behavior across browsers
+
+---
+
+### 7. Interaction With Other Features
+
+- [ ] Day/Night toggle works correctly while chat is active
+- [ ] File upload dialog / modals respect theme colors
+- [ ] Error banners and notifications are readable in both modes
+- [ ] “Recent howls” and footer section follow the theme correctly
+
+---
+
+### 8. Edge Cases & Stress
+
+- [ ] Rapid toggling (click toggle several times quickly) does not crash UI
+- [ ] Toggle during ongoing LLM response does not break streaming
+- [ ] Toggle while scrolling long conversation keeps text readable
+- [ ] No significant performance lag when switching themes
+
+---
+
+### 9. Cross-Browser Checks
+
+- [ ] Chrome: all above scenarios pass
+- [ ] Firefox: theme toggle and persistence behave the same
+- [ ] Safari (if available): no visual regressions or missing styles
+
+---
+
+## 📊 Execution Summary
+
+| Scenario                            | Status | Notes | Runs Tested |
+|-------------------------------------|--------|-------|------------|
+| Toggle Visibility & Basic Behavior  | ⏳ |       |            |
+| Visual Changes (Main Page)          | ⏳ |       |            |
+| Chat Area & Messages                | ⏳ |       |            |
+| Persistence After Page Refresh      | ⏳ |       |            |
+| Persistence Across Navigation       | ⏳ |       |            |
+| New Session Behavior                | ⏳ |       |            |
+| Interaction With Other Features     | ⏳ |       |            |
+| Edge Cases & Stress                 | ⏳ |       |            |
+| Cross-Browser Checks                | ⏳ |       |            |
+
+**Total Checks**: 25+  
+**Pass Rate**: ⏳ Not calculated
+
+---
+
+## ⚠️ Risks & Critical Checks
+
+🔴 CRITICAL: Text becomes unreadable in Day or Night mode (contrast issues)  
+🔴 CRITICAL: Theme setting does not persist as per product expectations  
+🟡 Risk: Inconsistent theme between pages or browsers  
+🟢 Desirable: Smooth theme switch with no layout jumps or performance issues
+
+---
+
+## ✅ Expected Behavior
+
+✅ Users can easily toggle between Day and Night modes from the main Askeal UI.  
+✅ The entire interface (chat, lists, footer, dialogs) follows the selected theme with good readability.  
+✅ The chosen theme persists appropriately after refresh and navigation, and behavior is consistent across supported browsers.
+
+---
+
+## 📝 Test Execution Notes
+
+- Fill in after first run:
+  - Theme behavior decisions (whether it should persist between sessions)
+  - Any visual polish issues that are UX enhancements, not bugs (e.g., minor contrast tweaks)
+  - Browser/version details where checks were performed
