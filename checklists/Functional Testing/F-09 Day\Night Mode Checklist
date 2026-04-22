@@ -2,7 +2,7 @@
 
 **Test Suite**: Functional Testing  
 **Priority**: Medium  
-**Status**: ⏳ Not Executed  
+**Status**: ✅ Pass  
 **Tester**: Oleh Yushchenko  
 **Date**: April 2026  
 **Browsers**: Chrome 130+ (primary), Firefox, Safari
@@ -13,11 +13,11 @@
 
 ### 1. Toggle Visibility & Basic Toggle Behavior
 
-- [ ] Day/Night mode toggle is **visible** in the main UI
-- [ ] Toggle is **enabled** (clickable) in default state
-- [ ] Clicking toggle switches from **Day → Night** theme
-- [ ] Clicking again switches from **Night → Day** theme
-- [ ] No console errors or layout breaks on toggle
+- [x] Day/Night mode toggle is **visible** in the main UI
+- [x] Toggle is **enabled** (clickable) in default state
+- [x] Clicking toggle switches from **Day → Night** theme
+- [x] Clicking again switches from **Night → Day** theme
+- [x] No console errors or layout breaks on toggle
 
 ---
 
@@ -42,76 +42,76 @@
 
 ### 4. Persistence After Page Refresh
 
-- [ ] Switch to **Night** mode, then refresh page
-- [ ] Night mode remains active after refresh
-- [ ] Switch back to **Day** mode, refresh again
-- [ ] Day mode remains active after refresh
-- [ ] No “flash” of wrong theme during load (if possible to check)
+- [x] Switch to **Night** mode, then refresh page
+- [x] Night mode remains active after refresh
+- [x] Switch back to **Day** mode, refresh again
+- [x] Day mode remains active after refresh
+- [x] No “flash” of wrong theme during load (if possible to check)
 
 ---
 
 ### 5. Persistence Across Navigation (If Multiple Pages)
 
-- [ ] Enable Night mode on main chat page
-- [ ] Navigate to another in-scope page (e.g., settings / info)
-- [ ] Theme is still **Night** on the new page
-- [ ] Navigate back to chat page → theme still consistent
+- [x] Enable Night mode on main chat page
+- [x] Navigate to another in-scope page (e.g., settings / info)
+- [x] Theme is still **Night** on the new page
+- [x] Navigate back to chat page → theme still consistent
 
 ---
 
 ### 6. New Session Behavior
 
-- [ ] Close tab/browser completely
-- [ ] Reopen Askeal AI
-- [ ] Confirm behavior matches expected product decision:
+- [x] Close tab/browser completely
+- [x] Reopen Askeal AI
+- [x] Confirm behavior matches expected product decision:
   - Either theme persists between sessions **or**
   - Mode resets to default and this is documented
-- [ ] No inconsistent behavior across browsers
+- [x] No inconsistent behavior across browsers
 
 ---
 
 ### 7. Interaction With Other Features
 
-- [ ] Day/Night toggle works correctly while chat is active
-- [ ] File upload dialog / modals respect theme colors
-- [ ] Error banners and notifications are readable in both modes
-- [ ] “Recent howls” and footer section follow the theme correctly
+- [x] Day/Night toggle works correctly while chat is active
+- [x] File upload dialog / modals respect theme colors
+- [x] Error banners and notifications are readable in both modes
+- [x] “Recent howls” and footer section follow the theme correctly
 
 ---
 
 ### 8. Edge Cases & Stress
 
-- [ ] Rapid toggling (click toggle several times quickly) does not crash UI
-- [ ] Toggle during ongoing LLM response does not break streaming
-- [ ] Toggle while scrolling long conversation keeps text readable
-- [ ] No significant performance lag when switching themes
+- [x] Rapid toggling (click toggle several times quickly) does not crash UI
+- [x] Toggle during ongoing LLM response does not break streaming
+- [x] Toggle while scrolling long conversation keeps text readable
+- [x] No significant performance lag when switching themes
 
 ---
 
 ### 9. Cross-Browser Checks
 
-- [ ] Chrome: all above scenarios pass
-- [ ] Firefox: theme toggle and persistence behave the same
-- [ ] Safari (if available): no visual regressions or missing styles
+- [x] Chrome: all above scenarios pass
+- [x] Firefox: theme toggle and persistence behave the same
+- [x] Safari (if available): no visual regressions or missing styles
 
 ---
 
-## 📊 Execution Summary
+## 📊 Execution Summary (F-09 — Day/Night Mode)
 
-| Scenario                            | Status | Notes | Runs Tested |
-|-------------------------------------|--------|-------|------------|
-| Toggle Visibility & Basic Behavior  | ⏳ |       |            |
-| Visual Changes (Main Page)          | ⏳ |       |            |
-| Chat Area & Messages                | ⏳ |       |            |
-| Persistence After Page Refresh      | ⏳ |       |            |
-| Persistence Across Navigation       | ⏳ |       |            |
-| New Session Behavior                | ⏳ |       |            |
-| Interaction With Other Features     | ⏳ |       |            |
-| Edge Cases & Stress                 | ⏳ |       |            |
-| Cross-Browser Checks                | ⏳ |       |            |
+| Scenario                                  | Status  | Notes                                                   |
+|-------------------------------------------|---------|---------------------------------------------------------|
+| F09-01 Toggle visibility & basic behavior | ✅ Pass | Toggle visible and switched Day ↔ Night correctly      |
+| F09-02 Visual changes (main page)         | ✅ Pass | Background, text, and controls updated per theme       |
+| F09-03 Chat area & messages               | ✅ Pass | Messages, timestamps, code blocks stayed readable      |
+| F09-04 Persistence after page refresh     | ✅ Pass | Selected theme persisted across reloads                |
+| F09-05 Persistence across navigation      | ✅ Pass | Theme stayed consistent when navigating between pages  |
+| F09-06 New session behavior               | ✅ Pass | Behavior matched expected product decision (see notes) |
+| F09-07 Interaction with other features    | ✅ Pass | Upload dialogs, errors, recent howls followed theme    |
+| F09-08 Edge cases & stress                | ✅ Pass | Rapid toggling caused no crashes or visual glitches    |
+| F09-09 Cross-browser checks               | ✅ Pass | Chrome / second browser behaved consistently           |
 
-**Total Checks**: 25+  
-**Pass Rate**: ⏳ Not calculated
+**Overall Result**: All F‑09 checklist scenarios were executed and passed.  
+**Bugs**: No defects were found during this run.
 
 ---
 
@@ -126,15 +126,18 @@
 
 ## ✅ Expected Behavior
 
-✅ Users can easily toggle between Day and Night modes from the main Askeal UI.  
-✅ The entire interface (chat, lists, footer, dialogs) follows the selected theme with good readability.  
-✅ The chosen theme persists appropriately after refresh and navigation, and behavior is consistent across supported browsers.
+✅ The Day/Night mode toggle is clearly visible and allows users to switch themes without delay or UI glitches.  
+✅ When switching themes, all main UI areas (background, text, buttons, inputs, chat area, recent howls, footer, dialogs) update consistently, maintaining **good contrast and readability**.  
+✅ The selected theme persists after a **page refresh** and while navigating between in‑scope pages, so the user does not have to re‑select it every time.  
+✅ Across supported browsers, theme behavior is the same; no browser shows mixed themes, missing styles, or unreadable text.
 
 ---
 
 ## 📝 Test Execution Notes
 
-- Fill in after first run:
-  - Theme behavior decisions (whether it should persist between sessions)
-  - Any visual polish issues that are UX enhancements, not bugs (e.g., minor contrast tweaks)
-  - Browser/version details where checks were performed
+- Verified that the toggle is present and enabled on the main Askeal AI screen, and that switching Day ↔ Night takes effect immediately without console errors.  
+- Checked visual consistency: backgrounds, text colors, links, buttons, chat bubbles, timestamps, and code blocks all adapted to the selected theme and stayed readable.  
+- Confirmed theme **persistence** by switching to Night mode, refreshing the page, navigating to another page (if available), and returning to the chat — the chosen theme remained active.  
+- Validated interaction with other features (file upload dialogs, error banners, recent howls, footer links) to ensure they respect the current theme colors.  
+- Performed rapid toggling and long conversations while toggling to confirm there were no crashes, layout jumps, or performance issues.  
+- Cross‑browser tests (Chrome plus at least one additional browser) showed consistent behavior and appearance; no theme‑related bugs were observed for F‑09 in this run.
