@@ -21,7 +21,9 @@ characteristics of the chatbot.
 ***
 
 ## 2. Test Items
-
+All testing is performed in the context of Askeal’s closed beta and follows
+the official Terms of Use: professional usage, evaluation/testing only, and
+no reliance on the Service as sole source of cybersecurity decisions. <br>
 The following product areas are planned for testing:
 
 - Chat input field and user interactions
@@ -99,6 +101,14 @@ The following product areas are planned for testing:
 | P-05 | Timeout handling | Very slow response or no response scenario |
 | P-06 | Large input handling | Large message or large file impact |
 
+## 3.5 Test Data Policy
+
+- Only synthetic, anonymized, or non-personal data is used in test scenarios.
+- No real production data, special categories of personal data (e.g. health,
+  political opinions, religious beliefs), or criminal/offence-related data
+  are entered into the Service.
+- Any example logs, user names, IPs, or identifiers used in tests are purely
+  fictional and not derived from real customers or systems.
 ***
 
 ## 4. Features Not Planned for This Phase
@@ -111,6 +121,8 @@ The following areas are not included in the current beta test phase:
 - Mobile application testing
 - Automation using Playwright or other frameworks
 - Database validation
+- - Validation of legal/compliance interpretations of Terms of Use or Privacy Policy
+  (the Service is tested as a decision-support tool only)
 
 These areas may be considered in future iterations if access and scope expand.
 
@@ -149,6 +161,8 @@ The following testing approaches are used in this project:
 | Device type | Desktop / laptop |
 | Testing tools | Chrome DevTools, Google Sheets, GitHub |
 | Documentation format | Markdown (.md), tables, reports |
+| Access / Auth | Closed beta access, authenticated via organization SSO where applicable |
+| Data policy | Synthetic/anonymized test data only; no real personal/sensitive data |
 
 ***
 
