@@ -10,8 +10,10 @@
 
 ## 1. Introduction
 
-This document defines the overall test strategy for the closed beta testing
-of Askeal AI — an LLM-powered chatbot assistant.
+This strategy is aligned with Askeal’s official Terms of Use. The Service is
+provided as a free, beta, AI-powered assistant for professional users in IT
+and cybersecurity, and is used here strictly for evaluation and testing
+purposes, not for production workloads or critical decisions.
 
 I was granted access to the beta version of the product and independently
 designed this strategy to achieve maximum test coverage across all functional
@@ -27,6 +29,9 @@ that are unique to AI-based systems.
 - Identify security vulnerabilities based on OWASP LLM Top-10
 - Measure basic performance characteristics
 - Produce structured test documentation as proof of methodology
+- Validate that the chatbot works as an information and decision-support tool,
+  without replacing professional cybersecurity judgment or being treated as
+  binding advice, in line with the Terms of Use.
 
 ---
 
@@ -48,6 +53,13 @@ that are unique to AI-based systems.
 - Automated testing (planned for future iterations)
 - Accessibility testing (WCAG)
 
+### 3.3 Data & Ethics Assumptions
+
+- All test scenarios use synthetic, anonymized, or non-personal data.
+- No special categories of personal data (health, politics, religion, etc.),
+  criminal data, or confidential third‑party information are used in testing.
+- Tests are designed to respect Askeal’s acceptable use and data protection
+  requirements and never target real systems or real users.
 ---
 
 ## 4. Test Approach
@@ -141,7 +153,11 @@ Use Case Testing, Error Guessing
 
 
 ### 5.3 LLM Security Testing
-**Framework**: OWASP LLM Top-10 (2025)
+**Framework**: OWASP LLM Top-10 (2025) <br>
+
+All adversarial prompts are designed to stay within Askeal’s acceptable use
+policy: they simulate attacks and abuse patterns in a controlled way, without
+targeting real infrastructure, real users, or real malware samples. <br>
 
 **Coverage**:
 - Prompt Injection (basic):
@@ -234,6 +250,7 @@ Each LLM response is scored on a **1–5 scale** across 4 dimensions:
 | Device | Desktop |
 | Tools | Chrome DevTools, Google Sheets, GitHub |
 | Documentation | Markdown (.md files) in this repository |
+| Authentication | Third‑party SSO (e.g. Microsoft / Google), subject to their own availability and policies |
 
 ---
 
@@ -246,6 +263,7 @@ Each LLM response is scored on a **1–5 scale** across 4 dimensions:
 | No API access | Can't do load testing | Limit to manual performance observation |
 | Closed beta (no screenshots) | Hard to prove findings | Detailed written bug reports with steps |
 | LLM updates during testing | Results change mid-test | Document model version/date per session |
+| Beta “as‑is” nature | Unstable availability or behavior not covered by SLAs | Treat as environment constraints; document as beta limitation, not always as product bug |
 
 ---
 
