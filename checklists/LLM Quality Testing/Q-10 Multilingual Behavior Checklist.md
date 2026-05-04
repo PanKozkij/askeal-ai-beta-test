@@ -84,21 +84,21 @@
 
 ---
 
-## 📊 Execution Summary
+## 📊 Execution Summary (Q-10 — Multilingual Behavior)
 
-| Scenario                          | Status | Notes | Runs Tested |
-|-----------------------------------|--------|-------|------------|
-| Basic Language Detection          | ⏳ |       |            |
-| Language Switching in Session     | ⏳ |       |            |
-| Mixed-Language Prompt Handling    | ⏳ |       |            |
-| Translation Quality               | ⏳ |       |            |
-| Language Preference Instruction   | ⏳ |       |            |
-| Multilingual Long Conversation    | ⏳ |       |            |
-| Safety & Refusal Across Languages | ⏳ |       |            |
-| Unsupported / Rare Languages      | ⏳ |       |            |
+| Scenario                          | Status | Notes |
+|-----------------------------------|--------|-------|
+| Basic Language Detection          | ✅ Pass | Ukrainian, English, Spanish all handled correctly |
+| Language Switching in Session     | ✅ Pass | Bot followed last message language smoothly |
+| Mixed-Language Prompt Handling    | ✅ Pass | Main language detected correctly, terms preserved |
+| Translation Quality               | ✅ Pass | UA↔EN↔ES translations accurate, QA terms intact |
+| Language Preference Instruction   | ✅ Pass | "Always Ukrainian" respected until override |
+| Multilingual Long Conversation    | ✅ Pass | Context maintained across 10+ turns and 3 languages |
+| Safety & Refusal Across Languages | ✅ Pass | Identical refusal behavior in UA/EN/ES |
+| Unsupported / Rare Languages      | ✅ Pass | Graceful fallback with clear explanation |
 
-**Total Checks**: 24+  
-**Pass Rate**: ⏳ Not calculated
+**Overall Result**: Q-10 Multilingual Behavior passed.  
+**Bugs**: No multilingual defects observed.
 
 ---
 
@@ -113,16 +113,25 @@
 
 ## ✅ Expected Behavior
 
-✅ Bot correctly understands and responds in Ukrainian, English, and Spanish  
-✅ Language switches are handled smoothly without losing context  
-✅ Translations preserve meaning, tone, and technical terms  
-✅ Safety rules and refusals are consistent across all languages  
-✅ Graceful fallback behavior for unsupported languages
+✅ Bot correctly **detects and responds** in Ukrainian, English, and Spanish.  
+✅ **Language switching** handled smoothly without losing conversation context.  
+✅ **Mixed-language prompts** understood by main language, foreign terms preserved or translated appropriately.  
+✅ **Translations preserve** meaning, tone, and technical QA/cybersecurity terminology.  
+✅ **Safety rules and refusals** consistent across all supported languages.  
+✅ **Long multilingual conversations** maintain context across language changes.  
+✅ **Explicit language preference** ("always answer in Ukrainian") respected until overridden.  
+✅ **Unsupported languages** trigger graceful fallback with suggestion to use UA/EN/ES.
 
 ---
 
 ## 📝 Test Execution Notes
 
-- Reuse the **same logical questions** across languages for fair comparison  
-- For each bug, record: language, exact prompt, full response, and what was wrong  
-- Note if one language feels significantly weaker (grammar, clarity, QA terminology)
+- Tested **UA/EN/ES** with identical QA/cybersecurity questions for fair comparison.
+- **Language switching**: UA→EN→ES→UA in single session, context preserved perfectly.
+- **Mixed prompts**: Ukrainian text + English "test plan" terms → correct Ukrainian response.
+- **Translation chain**: UA→EN→ES→UA roundtrip preserved original meaning.
+- **Preference instruction**: "Always Ukrainian" respected for 5 prompts, English override worked.
+- **10-turn conversation**: 3 language switches, all earlier context remembered correctly.
+- **Safety consistency**: Same prompt injection refusal worked identically in all 3 languages.
+- **Rare language test**: Bot clearly stated limitation and offered to continue in supported languages.
+- No grammar issues, no terminology confusion, no context loss observed across languages.
