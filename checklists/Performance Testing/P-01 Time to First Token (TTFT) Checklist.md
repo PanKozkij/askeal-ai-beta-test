@@ -85,21 +85,21 @@
 
 ---
 
-## 📊 Execution Summary
+## 📊 Execution Summary (P-01 — Time to First Token)
 
-| Scenario                                   | Status | Notes | Runs Tested |
-|--------------------------------------------|--------|-------|------------|
-| Short Prompt — Baseline                    | ⏳ |       |            |
-| Short Prompt — New Sessions                | ⏳ |       |            |
-| Medium Prompt                              | ⏳ |       |            |
-| Long Prompt                                | ⏳ |       |            |
-| After Long Conversation (20+ Turns)        | ⏳ |       |            |
-| Multiple Tabs / Sessions Open              | ⏳ |       |            |
-| Slow Network Simulation                    | ⏳ |       |            |
-| Error / Timeout Handling                   | ⏳ |       |            |
+| Scenario                             | Status | Notes |
+|--------------------------------------|--------|-------|
+| Short Prompt — Baseline              | ✅ Pass | Stable TTFT across 3 runs in same session |
+| Short Prompt — New Sessions          | ✅ Pass | Consistent TTFT across fresh sessions |
+| Medium Prompt (2–3 Sentences)        | ✅ Pass | No major degradation vs. short baseline |
+| Long Prompt (Several Paragraphs)     | ✅ Pass | Slight increase, within acceptable limits |
+| After Long Conversation (20+ Turns)  | ✅ Pass | No performance drop after long context |
+| Multiple Tabs / Sessions Open        | ✅ Pass | No TTFT spike or stuck tab observed |
+| Slow Network Simulation              | ✅ Pass | TTFT increased gracefully on Slow 3G |
+| Error / Timeout Handling             | ✅ Pass | Spinner shown, no raw errors exposed |
 
-**Total Checks**: 20+  
-**Pass Rate**: ⏳ Not calculated
+**Overall Result**: P-01 Time to First Token passed.  
+**Bugs**: No TTFT or responsiveness defects observed.
 
 ---
 
@@ -114,16 +114,25 @@
 
 ## ✅ Expected Behavior
 
-✅ First token appears within a reasonable time for short and medium prompts  
-✅ TTFT degrades gracefully for long prompts and long conversations  
-✅ User always sees clear feedback (spinner / error) if backend is slow or failing  
-✅ Multiple tabs / sessions do not cause extreme TTFT spikes
+✅ **First token appears** within a reasonable time for short and medium prompts.  
+✅ **TTFT degrades gracefully** for longer prompts without UI freeze.  
+✅ **Long conversations (20+ turns)** do not significantly increase first token delay.  
+✅ **Multiple tabs** open simultaneously do not cause extreme TTFT spikes.  
+✅ **Slow network** conditions increase TTFT but do not break the response flow.  
+✅ **Loading indicator/spinner** is always visible while waiting for first token.  
+✅ **Clear error message** shown if backend fails, no raw stack traces exposed.
 
 ---
 
-## 📝 Test Execution Notes
+### 📝 Test Execution Notes
 
-- For each test, save:
-  - The exact prompt(s) used and conversation context (e.g., “fresh session”, “20+ turns”)
-  - Measured TTFT values and how you measured them (DevTools / stopwatch)
-  - Mapping of any failures to performance requirements (TTFT / responsiveness) in your bug reports
+- **Measurement method**: Chrome DevTools Network tab + manual stopwatch observation.
+- **Baseline short prompt**: 3 runs in same session → stable TTFT, no outliers.
+- **New sessions**: Same prompt across 3 fresh sessions → consistent performance.
+- **Medium prompt**: 2–3 sentence cybersecurity question → marginal TTFT increase.
+- **Long prompt**: Multi-paragraph paste → slight delay, first token still appeared.
+- **20+ turns context**: Long conversation then short prompt → no noticeable drop.
+- **Multiple tabs**: 3 simultaneous tabs → all received first token without freezing.
+- **Slow 3G throttle**: DevTools throttle applied → TTFT increased, no broken state.
+- **Timeout scenario**: Slow backend conditions → spinner displayed correctly.
+- No blank screens, infinite loaders, or raw error dumps observed in any scenario.
