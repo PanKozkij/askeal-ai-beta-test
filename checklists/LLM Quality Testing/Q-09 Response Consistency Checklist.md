@@ -99,6 +99,7 @@
 **Overall Result**: Q-09 Response Consistency passed.  
 **Bugs**: No consistency defects observed.
 
+## ⚠️ Risks & Critical Checks
 🔴 **CRITICAL**: Bot gives different cybersecurity answers to the same prompt without new evidence  
 🔴 **CRITICAL**: Bot changes severity, risk, or IOC interpretation inconsistently  
 🔴 **CRITICAL**: Bot contradicts earlier incident response or compliance advice  
