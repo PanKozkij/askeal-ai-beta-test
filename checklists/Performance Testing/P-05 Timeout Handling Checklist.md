@@ -2,7 +2,7 @@
 
 **Test Group**: Performance Testing  
 **Priority**: High  
-**Status**: ⏳ Not Executed  
+**Status**: ✅ Pass  
 **Tester**: Oleh Yushchenko  
 **Date**: April 2026  
 **Browser**: Chrome 130+  
@@ -95,23 +95,22 @@
 
 ---
 
-## 📊 Execution Summary
+## 📊 Execution Summary (P-05 — Timeout Handling)
 
-| Scenario                               | Status | Notes | Runs Tested |
-|----------------------------------------|--------|-------|------------|
-| Slow but Successful Response           | ⏳ |       |            |
-| Extremely Slow Response (Near Timeout) | ⏳ |       |            |
-| Full Timeout — No Response             | ⏳ |       |            |
-| Retry After Timeout                    | ⏳ |       |            |
-| Partial Response Then Failure          | ⏳ |       |            |
-| Long Conversation + Timeout            | ⏳ |       |            |
-| Multiple Tabs During Timeout           | ⏳ |       |            |
-| UI Responsiveness During Slow States   | ⏳ |       |            |
-| User Guidance and Messaging            | ⏳ |       |            |
+| Scenario                               | Status | Notes |
+|----------------------------------------|--------|-------|
+| Slow but Successful Response           | ✅ Pass | Slow response completed with clear loading indicator |
+| Extremely Slow Response (Near Timeout) | ✅ Pass | Timeout message / feedback appeared when needed |
+| Full Timeout — No Response             | ✅ Pass | No silent hang; clear error displayed |
+| Retry After Timeout                    | ✅ Pass | Retry sent a new request and recovered correctly |
+| Partial Response Then Failure          | ✅ Pass | Interrupted answer was clearly marked as incomplete |
+| Long Conversation + Timeout            | ✅ Pass | Earlier messages remained intact |
+| Multiple Tabs During Timeout           | ✅ Pass | Timeout isolated to one tab; others continued normally |
+| UI Responsiveness During Slow States   | ✅ Pass | Scroll/cancel remained usable; no page freeze |
+| User Guidance and Messaging            | ✅ Pass | Friendly, understandable recovery guidance |
 
-**Total Checks**: 25+  
-**Pass Rate**: ⏳ Not calculated
-
+**Overall Result**: P-05 Timeout Handling passed.  
+**Bugs**: No timeout-handling or recovery defects observed.
 ---
 
 ## ⚠️ Risks & Critical Checks
@@ -125,16 +124,26 @@
 
 ## ✅ Expected Behavior
 
-✅ Slow and timeout scenarios are handled gracefully with clear feedback  
-✅ Conversation history remains intact even when a response fails  
-✅ Other tabs/sessions remain unaffected by a single timeout  
-✅ Users can retry or continue without confusion or data loss
+✅ **Slow responses** show clear loading feedback until completion.  
+✅ **Near-timeout / timeout cases** display a friendly timeout or retry message.  
+✅ **No silent hangs** — the user is never left staring at an unchanged UI.  
+✅ **Partial responses** are clearly marked as interrupted, not successful.  
+✅ **Conversation history stays intact** after a timeout or network failure.  
+✅ **Other tabs/sessions remain unaffected** by a timeout in one tab.  
+✅ **Retry/continue flow** works cleanly without duplicate or corrupted messages.  
+✅ **Messages are understandable** and do not expose technical internals.
 
 ---
 
 ## 📝 Test Execution Notes
 
-- For each test, save:
-  - The exact prompt(s) used and context (long conversation, multiple tabs, simulated network issues, etc.)
-  - Observed behavior, including error/timeout messages and UI indicators
-  - Mapping of any failures to performance requirements (timeout handling / resilience) in your bug reports
+- **Slow success**: Repeated prompts until load increased → slower but completed normally.
+- **Near timeout**: Heavy multi-paragraph prompt → timeout feedback appeared correctly.
+- **No response**: Simulated outage / network drop → clear error shown, no endless spinner.
+- **Retry**: Re-sent prompt after timeout → request succeeded, no broken state.
+- **Partial failure**: Tokens appeared, connection dropped → response flagged as interrupted.
+- **Long conversation**: Timeout during 20+ turn thread → earlier context preserved.
+- **Multiple tabs**: Timeout in one tab → other tabs kept working, no global freeze.
+- **UI during slow state**: Scroll/cancel remained available; browser stayed responsive.
+- **Messaging**: Error text was polite, simple, and suggested retry/check internet.
+- No raw stack traces, no frozen loaders, and no corruption of chat history observed.
