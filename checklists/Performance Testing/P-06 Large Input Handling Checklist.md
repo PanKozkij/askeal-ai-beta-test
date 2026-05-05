@@ -97,22 +97,22 @@
 
 ---
 
-## 📊 Execution Summary
+## 📊 Execution Summary (P-06 — Large Input Handling)
 
-| Scenario                                  | Status | Notes | Runs Tested |
-|-------------------------------------------|--------|-------|------------|
-| Large Text Prompt Near Limit              | ⏳ |       |            |
-| Text Prompt Exceeding Limit               | ⏳ |       |            |
-| Large File Upload — Within Limit          | ⏳ |       |            |
-| File Too Large — Above Limit              | ⏳ |       |            |
-| Multiple Large Inputs in Sequence         | ⏳ |       |            |
-| Large Input + RAG / Document QA           | ⏳ |       |            |
-| Large Input + Long Conversation           | ⏳ |       |            |
-| Large Input on Slower Network             | ⏳ |       |            |
-| Error Handling & User Guidance            | ⏳ |       |            |
+| Scenario                              | Status | Notes |
+|---------------------------------------|--------|-------|
+| Large Text Prompt Near Limit          | ✅ Pass | Multi-page input accepted, meaningful response returned |
+| Text Prompt Exceeding Limit           | ✅ Pass | Friendly limit message shown, no crash or dropped message |
+| Large File Upload — Within Limit      | ✅ Pass | Upload completed, bot answered questions about content |
+| File Too Large — Above Limit          | ✅ Pass | File rejected with clear user-friendly message |
+| Multiple Large Inputs in Sequence     | ✅ Pass | System stayed responsive, no progressive slowdown |
+| Large Input + RAG / Document QA       | ✅ Pass | Long document processed, accurate answers, no memory error |
+| Large Input + Long Conversation       | ✅ Pass | Earlier context preserved, no messages disappeared |
+| Large Input on Slower Network         | ✅ Pass | Progress visible, clear error on failure, no stuck state |
+| Error Handling & User Guidance        | ✅ Pass | All errors clear, non-technical, with recovery guidance |
 
-**Total Checks**: 25+  
-**Pass Rate**: ⏳ Not calculated
+**Overall Result**: P-06 Large Input Handling passed.  
+**Bugs**: No large input, file upload, or error-handling defects observed.
 
 ---
 
@@ -124,19 +124,28 @@
 🟢 Desirable: Predictable limits, clear errors, and stable behavior even with big inputs
 
 ---
-
 ## ✅ Expected Behavior
 
-✅ Large but valid inputs are processed or rejected with clear messaging  
-✅ System never silently fails or corrupts chat history due to input size  
-✅ Performance degrades gracefully (slower but still usable), not catastrophically  
-✅ Users understand how to adjust input size when they hit limits
+✅ **Large valid inputs** are processed correctly or rejected with a clear limit message.  
+✅ **Oversized files** are blocked immediately with a friendly, non-technical error.  
+✅ **System never silently ignores** large text or file inputs without feedback.  
+✅ **Chat history remains intact** after large input operations, no messages lost.  
+✅ **Performance degrades gracefully** — slower but still usable, no browser freeze.  
+✅ **RAG / Document QA** handles long documents at acceptable speed without memory errors.  
+✅ **Slow network uploads** show visible progress and a clear error on failure.  
+✅ **Error messages** explain limits in simple terms and suggest recovery steps.
 
 ---
 
 ## 📝 Test Execution Notes
 
-- For each test, save:
-  - The approximate size and type of input (text length, file type + size)
-  - Observed behavior (success, error message, performance impact)
-  - Mapping of any failures to performance and robustness requirements (large input handling) in your bug reports
+- **Near limit**: Several pages pasted → accepted and answered without UI breaking.
+- **Over limit**: Excessive text sent → friendly character/page limit message shown.
+- **File within limit**: Valid large file uploaded → content QA worked correctly.
+- **File over limit**: Oversized file attempted → rejected instantly, no silent failure.
+- **Sequential inputs**: 3 large prompts in a row → browser remained stable, no leak.
+- **RAG + long doc**: Uploaded long PDF/text → questions answered accurately, no truncation.
+- **Large input + 10+ turns**: Large message at turn 12 → context and history preserved.
+- **Slow 3G throttle**: Large upload on throttled network → progress shown, fail handled.
+- **Error messages**: All limit/failure messages non-technical and consistent with product tone.
+- No stack traces, internal paths, silent drops, or browser "page unresponsive" in any scenario.
