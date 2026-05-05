@@ -15,83 +15,83 @@
 
 ### 1. Slow but Successful Response
 
-- [ ] Send a normal prompt when the system is under noticeable load (or repeat prompts until you see a slow case)
-- [ ] Response takes **significantly longer** than usual but eventually completes
-- [ ] UI shows a clear loading indicator (spinner / streaming indicator) the whole time
-- [ ] No raw error messages or broken layout
+- [x] Send a normal prompt when the system is under noticeable load (or repeat prompts until you see a slow case)
+- [x] Response takes **significantly longer** than usual but eventually completes
+- [x] UI shows a clear loading indicator (spinner / streaming indicator) the whole time
+- [x] No raw error messages or broken layout
 
 ---
 
 ### 2. Extremely Slow Response (Near Timeout)
 
-- [ ] Trigger a very heavy prompt (e.g., long multi-paragraph input asking for detailed analysis)
-- [ ] Observe behavior if the backend is extremely slow
-- [ ] If there is a timeout limit, user sees a **clear timeout message**
-- [ ] User is not left staring at an unchanged UI with no feedback
+- [x] Trigger a very heavy prompt (e.g., long multi-paragraph input asking for detailed analysis)
+- [x] Observe behavior if the backend is extremely slow
+- [x] If there is a timeout limit, user sees a **clear timeout message**
+- [x] User is not left staring at an unchanged UI with no feedback
 
 ---
 
 ### 3. Full Timeout — No Response From Server
 
-- [ ] Simulate network failure or backend outage (e.g., disable network after sending prompt, or test during known outage)
-- [ ] Bot does not silently hang forever
-- [ ] User sees an error or “Unable to get a response, please try again” message
-- [ ] No cryptic technical text (stack trace, internal error codes) is shown
+- [x] Simulate network failure or backend outage (e.g., disable network after sending prompt, or test during known outage)
+- [x] Bot does not silently hang forever
+- [x] User sees an error or “Unable to get a response, please try again” message
+- [x] No cryptic technical text (stack trace, internal error codes) is shown
 
 ---
 
 ### 4. Retry After Timeout
 
-- [ ] After a timeout, use the UI’s retry option (if available) or re-send the same prompt
-- [ ] Retry works correctly and sends a new request
-- [ ] If issue is temporary, response returns normally on retry
-- [ ] No duplicate partial messages or broken conversation state
+- [x] After a timeout, use the UI’s retry option (if available) or re-send the same prompt
+- [x] Retry works correctly and sends a new request
+- [x] If issue is temporary, response returns normally on retry
+- [x] No duplicate partial messages or broken conversation state
 
 ---
 
 ### 5. Partial Response Then Failure
 
-- [ ] Try to trigger a case where some tokens appear and then the connection drops
-- [ ] UI clearly indicates that the answer did not finish (e.g., error badge, “response interrupted”)
-- [ ] Conversation view does not show the partial answer as “successful” without warning
-- [ ] User can safely retry without corrupting chat history
+- [x] Try to trigger a case where some tokens appear and then the connection drops
+- [x] UI clearly indicates that the answer did not finish (e.g., error badge, “response interrupted”)
+- [x] Conversation view does not show the partial answer as “successful” without warning
+- [x] User can safely retry without corrupting chat history
 
 ---
 
 ### 6. Long Conversation + Timeout
 
-- [ ] In a 20+ turn conversation, send another prompt during a slow period
-- [ ] If timeout happens, earlier messages remain intact
-- [ ] No corruption of chat history or sudden loss of previous turns
-- [ ] User can continue the conversation after the failure
+- [x] In a 20+ turn conversation, send another prompt during a slow period
+- [x] If timeout happens, earlier messages remain intact
+- [x] No corruption of chat history or sudden loss of previous turns
+- [x] User can continue the conversation after the failure
 
 ---
 
 ### 7. Multiple Tabs During Timeout
 
-- [ ] With 2–3 Askeal tabs open, trigger a timeout in one tab
-- [ ] Other tabs continue to function normally (no global freeze)
-- [ ] Error is isolated to the tab where timeout occurred
-- [ ] No cross-tab error popups or state confusion
+- [x] With 2–3 Askeal tabs open, trigger a timeout in one tab
+- [x] Other tabs continue to function normally (no global freeze)
+- [x] Error is isolated to the tab where timeout occurred
+- [x] No cross-tab error popups or state confusion
 
 ---
 
 ### 8. UI Responsiveness During Slow/Timeout States
 
-- [ ] While a response is slow or timing out:
+- [x] While a response is slow or timing out:
   - User can still scroll chat history
   - User can cancel/stop the response if a stop button is available
-- [ ] Browser remains responsive (no “page unresponsive” dialogs)
-- [ ] UI elements (buttons, inputs) do not get permanently disabled
+- [x] Browser remains responsive (no “page unresponsive” dialogs)
+- [x] UI elements (buttons, inputs) do not get permanently disabled
 
 ---
 
 ### 9. User Guidance and Messaging
 
-- [ ] Error/timeout messages are understandable for non-technical users
-- [ ] Messages clearly suggest next steps (retry, check internet, try later)
-- [ ] No references to internal service names or debug info
-- [ ] Tone remains polite and consistent with product style
+- [x] Error/timeout messages are understandable for non-technical users
+- [x] Messages clearly suggest next steps (retry, check internet, try later)
+- [x] No references to internal service names or debug info
+- [x] Tone remains polite and consistent with product style
 
 ---
 
