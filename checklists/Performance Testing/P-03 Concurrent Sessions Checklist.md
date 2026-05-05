@@ -2,7 +2,7 @@
 
 **Test Group**: Performance Testing  
 **Priority**: High  
-**Status**: ⏳ Not Executed  
+**Status**: ✅ Pass  
 **Tester**: Oleh Yushchenko  
 **Date**: April 2026  
 **Browsers**: Chrome 130+ (primary), Firefox, Safari  
@@ -95,22 +95,22 @@
 
 ---
 
-## 📊 Execution Summary
+## 📊 Execution Summary (P-03 — Concurrent Sessions)
 
-| Scenario                                  | Status | Notes | Runs Tested |
-|-------------------------------------------|--------|-------|------------|
-| Two Tabs, Same Browser                    | ⏳ |       |            |
-| Three+ Tabs (Same Browser)                | ⏳ |       |            |
-| Different Browsers Concurrently           | ⏳ |       |            |
-| Long Conversation + New Tab               | ⏳ |       |            |
-| Concurrent Heavy Prompts                  | ⏳ |       |            |
-| Session Isolation (No Cross-Tab Mixing)   | ⏳ |       |            |
-| Browser Refresh During Concurrent Use     | ⏳ |       |            |
-| Logout / Session Expiry Behavior          | ⏳ |       |            |
-| Error Handling Under Load                 | ⏳ |       |            |
+| Scenario                                | Status | Notes |
+|-----------------------------------------|--------|-------|
+| Two Tabs, Same Browser                  | ✅ Pass | Both tabs responsive, no freezes or lost messages |
+| Three+ Tabs (Same Browser)              | ✅ Pass | All 3–4 tabs completed within acceptable time |
+| Different Browsers Concurrently         | ✅ Pass | Chrome, Firefox, Safari performed comparably |
+| Long Conversation + New Tab             | ✅ Pass | No slowdown in Tab 2 from Tab 1 long context |
+| Concurrent Heavy Prompts                | ✅ Pass | No tab failed silently, no answer contamination |
+| Session Isolation (No Cross-Tab Mixing) | ✅ Pass | Topics stayed isolated between tabs |
+| Browser Refresh During Concurrent Use   | ✅ Pass | Refreshed tab reloaded cleanly, others unaffected |
+| Logout / Session Expiry Behavior        | ✅ Pass | Consistent and secure behavior across tabs |
+| Error Handling Under Load               | ✅ Pass | Clear UI feedback, system recovered correctly |
 
-**Total Checks**: 25+  
-**Pass Rate**: ⏳ Not calculated
+**Overall Result**: P-03 Concurrent Sessions passed.  
+**Bugs**: No concurrency or session isolation defects observed.
 
 ---
 
@@ -122,19 +122,27 @@
 🟢 Desirable: Smooth, isolated experience per tab, even with multiple sessions
 
 ---
-
 ## ✅ Expected Behavior
 
-✅ Multiple concurrent sessions remain responsive and independent  
-✅ No data, context, or messages leak between tabs or browsers  
-✅ Performance degrades gracefully rather than failing abruptly  
-✅ Refresh and logout behavior are consistent and secure across sessions
+✅ **Multiple concurrent sessions** remain fully responsive and independent.  
+✅ **No data, context, or messages** leak or mix between tabs or browsers.  
+✅ **Performance degrades gracefully** under concurrent load, no abrupt failures.  
+✅ **Browser refresh** during concurrent use does not disrupt other active tabs.  
+✅ **Logout in one tab** triggers consistent, secure behavior across all sessions.  
+✅ **Heavy concurrent prompts** processed without cross-contamination of answers.  
+✅ **Clear UI feedback** shown if backend slows down under concurrent load.
 
 ---
 
 ## 📝 Test Execution Notes
 
-- For each test, save:
-  - The exact setup (number of tabs/browsers, long/short prompts, login state)
-  - The prompts used and observed timings / issues
-  - Mapping of any failures to performance and isolation requirements (concurrent sessions) in your bug reports
+- **2 tabs**: Alternating prompts in both → both stayed responsive throughout.
+- **3–4 tabs**: Simultaneous short prompts → all completed, no stuck "Loading…".
+- **Cross-browser**: Chrome + Firefox + Safari → comparable TTFT and completion.
+- **Long context + new tab**: Tab 1 at 20+ turns, Tab 2 fresh → no Tab 2 slowdown.
+- **Heavy concurrent**: Long prompts in 3 tabs → measured via DevTools, all completed.
+- **Isolation**: Tab 1 football topic, Tab 2 QA topic → zero topic bleed-through.
+- **Refresh**: Refreshed Tab 2 mid-session → Tab 1 continued uninterrupted.
+- **Logout**: Logged out in one tab → other tabs handled re-auth consistently.
+- **Load errors**: Slow period triggered → spinners shown, no raw error dumps.
+- No cross-session data mixing, crashes, or silent failures in any scenario.
