@@ -32,6 +32,6 @@ Instead, I used this project as an opportunity to showcase my QA mindset, struct
 ## 🗂️ Repository Structure
 
 * 📄 **[README](README.md)** — Main project overview (this file)
-* 📄 **[Test Plan](Test-Strategy.md)** — This document describes the detailed test plan for the beta testing
+* 📄 **[Test Plan](Test-Plan.md)** — This document describes the detailed test plan for the beta testing
 * 📄 **[Test Strategy](Test-Strategy.md)** — This strategy created to achieve maximum test coverage across all testing process
 * 📁 **[Checklists](checklists)** — Contains all checks (Functional, Quality, Security, Perfomance)
