@@ -2,7 +2,7 @@
 
 **Test Suite**: Functional Testing  
 **Priority**: Medium  
-**Status**: ✅ Pass <br>  
+**Status**: ✅ Pass  
 **Tester**: Oleh Yushchenko  
 **Date**: April 2026  
 **Browser**: Chrome 130+
@@ -79,11 +79,12 @@
 
 ## ⚠️ Risks & Critical Checks
 
-- 🔴 **Suggestions don't populate input field**
-- 🔴 **Suggestions auto-send on click** (bad UX)<br>
-- 🔴 **Broken/missing suggestion text**<br>
-- 🟡 **Visual feedback missing** (hard to use)<br>
+🔴 **Suggestions don't populate input field**  
+🔴 **Suggestions auto-send on click** (bad UX)  
+🔴 **Broken/missing suggestion text**  
+🟡 **Visual feedback missing** (hard to use)  
 
+---
 ## ✅ Expected Behavior
 
 ✅ The “Try asking about…” suggestion prompts are **visible and clearly labeled** in the UI, so users understand they can click them.  
@@ -101,3 +102,10 @@
 - Suggestion texts were reviewed for **safety and security**: no hidden instructions to override system behavior, no harmful or sensitive content, and no confusing wording.  
 - After refreshing the page, suggestion prompts were still displayed and worked the same way, confirming stable behavior across sessions.  
 - No bugs were identified for F‑04 in this run; these results are ready to reference in the Test Summary Report and for future regression checks on suggestion prompts.
+
+**Environment Notes**:
+* Closed beta - no screenshots
+* Test files prepared locally
+* Chrome DevTools Network tab monitoring
+* Manual upload testing only
+
