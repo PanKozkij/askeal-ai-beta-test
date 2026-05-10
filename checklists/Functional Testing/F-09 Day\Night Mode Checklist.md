@@ -5,7 +5,7 @@
 **Status**: ✅ Pass  
 **Tester**: Oleh Yushchenko  
 **Date**: April 2026  
-**Browsers**: Chrome 130+ (primary), Firefox, Safari
+**Browsers**: Chrome 130+
 
 ---
 
