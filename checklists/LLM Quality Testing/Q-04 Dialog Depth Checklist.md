@@ -2,9 +2,9 @@
 
 **Test Suite**: LLM Quality Testing  
 **Priority**: High  
-**Status**: ✅ Pass<br>
-**Tester**: Oleh Yushchenko<br>
-**Date**: April 2026<br>
+**Status**: ✅ Pass  
+**Tester**: Oleh Yushchenko  
+**Date**: April 2026  
 **Browser**: Chrome 130+
 
 ---
@@ -12,19 +12,19 @@
 ## ✅ Dialog Depth Scenarios
 
 ### 1. 5-Turn Test
-- [x] Turn 1: "My name is Oleh"<br>
-- [x] Turn 3: Bot uses "Oleh"<br>
-- [x] Turn 5: Still remembers name<br>
+- [x] Turn 1: "My name is Oleh"  
+- [x] Turn 3: Bot uses "Oleh"  
+- [x] Turn 5: Still remembers name  
 
 ### 2. 10-Turn Test  
-- [x] Turn 1: "I live in Alicante, Spain"<br>
-- [x] Turn 10: Bot references Alicante<br>
-- [x] Context maintained across 10 turns<br>
+- [x] Turn 1: "I live in Alicante, Spain"  
+- [x] Turn 10: Bot references Alicante  
+- [x] Context maintained across 10 turns  
 
 ### 3. Context Overload
-- [x] 20+ turns → No confusion<br>
-- [x] References early context correctly<br>
-- [x] No repetition loops<br>
+- [x] 20+ turns → No confusion  
+- [x] References early context correctly  
+- [x] No repetition loops  
 
 ---
 
@@ -41,15 +41,17 @@
 
 **Overall Result**: All Q‑04 dialog depth scenarios were executed and passed.  
 **Bugs**: No defects found; inability to see previous howls is by design (sessions are independent).
+
 ---
 
 ## ⚠️ Risks & Critical Checks
 
-🔴 Context loss after 10 turns<br>
-🔴 Repetition loops<br>
-🟡 Name confusion<br>
-🟢 Topic switching failure<br>
+🔴 Context loss after 10 turns  
+🔴 Repetition loops  
+🟡 Name confusion  
+🟢 Topic switching failure  
 
+---
 ## ✅ Expected Behavior
 
 ✅ Within a single conversation (one howl), the bot maintains context across at least 5–10+ messages and can correctly refer back to earlier details when the user mentions them again.[file:2]  
@@ -69,3 +71,10 @@
   - The bot responded with messages like: “I don't have access to previous conversations. Each session is independent—I can only see the messages in our current conversation thread.”
   - This behavior was treated as **correct and aligned** with privacy and session‑leakage requirements: no cross-session memory, no access to other howls.[file:35]  
 - As a result, Q‑04 is marked as **Pass**: dialog depth and context retention are good inside a single howl, and the lack of access to previous conversations is documented as expected design, not as a defect.
+
+**Environment Notes**:
+* Closed beta - no screenshots
+* Test files prepared locally
+* Chrome DevTools Network tab monitoring
+* Manual upload testing only
+
