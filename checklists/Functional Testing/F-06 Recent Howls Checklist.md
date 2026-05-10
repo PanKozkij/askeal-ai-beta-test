@@ -54,12 +54,10 @@
 - [x] **Empty preview** → shows timestamp OR "Untitled"
 
 ### 7. Cross-Browser
-[x] Chrome → List works + responsive
-[x] Firefox → List works + responsive
-[x] Safari → List works + responsive
-[x] Edge → List works + responsive
-
-text
+- [x] Chrome → List works + responsive
+- [x] Firefox → List works + responsive
+- [x] Safari → List works + responsive
+- [x] Edge → List works + responsive
 
 ---
 ## 📊 Execution Summary (F-06 — Recent Howls)
@@ -87,7 +85,7 @@ text
 🟡 List doesn't update with new conversations <br>
 🟢 Pagination/scroll for long lists <br>
 
-
+---
 ## ✅ Expected Behavior
 
 ✅ The “Recent howls” section is **clearly visible** in the UI and loads without errors when the user opens the Askeal AI interface.  
@@ -107,4 +105,11 @@ text
 - Created and deleted howls to confirm that the list updates correctly after creation and deletion, including after manual page refresh.  
 - Cross‑browser checks (Chrome and at least one additional browser) showed consistent layout and interaction; no visual overlaps or unclickable list items were observed.  
 - No issues were found for F‑06 in this run; results are suitable for inclusion in the Test Summary Report and for future regression around “Recent howls”.
-```
+
+**Environment Notes**:
+* Closed beta - no screenshots
+* Test files prepared locally
+* Chrome DevTools Network tab monitoring
+* Manual upload testing only
+
+
