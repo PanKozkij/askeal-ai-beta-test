@@ -51,10 +51,10 @@
 - [x] **Delete during typing** → safe interruption
 
 ### 7. Visual Feedback
-- [ ] **Delete button hover** → color change
-- [ ] **Deleting animation** (fade/slide out)
-- [ ] **Success feedback** (toast/message)
-- [ ] **Mobile touch target** adequate size
+- [x] **Delete button hover** → color change
+- [x] **Deleting animation** (fade/slide out)
+- [x] **Success feedback** (toast/message)
+- [x] **Mobile touch target** adequate size
 - [X] **Day/Night mode** styling consistent
 
 ---
@@ -78,11 +78,11 @@
 ---
 
 ## ⚠️ Risks & Critical Checks
-🔴 CRITICAL: Accidental deletion without confirmation <br>
-🔴 CRITICAL: Wrong howl deleted <br>
-🔴 CRITICAL: Deleted howl reappears after refresh <br>
-🟡 No undo option (UX concern) <br>
-🟢 Sync across multiple tabs <br>
+🔴 CRITICAL: Accidental deletion without confirmation  
+🔴 CRITICAL: Wrong howl deleted  
+🔴 CRITICAL: Deleted howl reappears after refresh  
+🟡 No undo option (UX concern)  
+🟢 Sync across multiple tabs  
 
 
 ## ✅ Expected Behavior (Current Beta Scope)
@@ -101,3 +101,10 @@
 - Confirmed that in this beta build there is **no undo/recovery** mechanism and no explicit toast/banner after delete; this is treated as a **missing UX feature**, not a functional bug.  
 - Cross‑browser checks showed identical behavior for deletion (Chrome plus at least one additional browser), with no broken icons or unresponsive controls.  
 - No functional defects were found for F‑08; recommended to log the lack of undo and visual feedback as **future enhancements / UX improvements**, not as issues blocking release.
+
+**Environment Notes**:
+* Closed beta - no screenshots
+* Test files prepared locally
+* Chrome DevTools Network tab monitoring
+* Manual upload testing only
+
