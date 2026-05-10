@@ -2,7 +2,7 @@
 
 **Test Suite**: Functional Testing  
 **Priority**: High  
-**Status**: ✅ Pass <br>
+**Status**: ✅ Pass  
 **Tester**: Oleh Yushchenko  
 **Date**: April 2026  
 **Browser**: Chrome 130+
@@ -77,10 +77,10 @@
 ---
 
 ## ⚠️ Risks & Notes
-- 🔴 CRITICAL: File upload vulnerabilities (XSS, RCE)
-- 🔴 CRITICAL: Large file DoS (memory exhaustion)
-- 🟡 File type confusion (double extensions)
-- 🟢 Filename sanitization (path traversal)
+🔴 CRITICAL: File upload vulnerabilities (XSS, RCE)  
+🔴 CRITICAL: Large file DoS (memory exhaustion)  
+🟡 File type confusion (double extensions)  
+🟢 Filename sanitization (path traversal)  
 
 
 ## ✅ Expected Behavior
