@@ -2,7 +2,7 @@
 
 **Test Suite**: Functional Testing  
 **Priority**: Medium  
-**Status**: ✅ Pass <br>  
+**Status**: ✅ Pass  
 **Tester**: Oleh Yushchenko  
 **Date**: April 2026  
 **Browser**: Chrome 130+
@@ -75,10 +75,10 @@
 ---
 
 ## ⚠️ Risks & Critical Checks
-🔴 CRITICAL: Broken links = trust issue <br>
-🔴 CRITICAL: Cookie settings don't save <br>
-🟡 Missing GDPR compliance info <br>
-🟢 AI transparency (model/version info) <br>
+🔴 CRITICAL: Broken links = trust issue  
+🔴 CRITICAL: Cookie settings don't save  
+🟡 Missing GDPR compliance info  
+🟢 AI transparency (model/version info)  
 
 
 ## ✅ Expected Behavior
@@ -97,3 +97,10 @@
 - Cookie management was tested by opening the cookie preferences dialog, changing at least one setting, saving, and confirming that the UI reflected the updated state.  
 - Cross‑browser checks covered at minimum Chrome and Firefox (and Safari where available); behavior and appearance were consistent, with no broken styles or non‑clickable links.  
 - No issues or regressions were found for F‑05 in this run; results are ready for inclusion in the Test Summary Report and future regression scope around compliance‑critical links.
+
+  **Environment Notes**:
+* Closed beta - no screenshots
+* Test files prepared locally
+* Chrome DevTools Network tab monitoring
+* Manual upload testing only
+
