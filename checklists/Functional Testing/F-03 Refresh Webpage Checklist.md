@@ -74,14 +74,6 @@ text
 **Overall Result**: All F-03 checklist scenarios were executed and passed.  
 **Bugs**: No defects were found during this run.
 
-## 📝 Test Execution Notes
-
-All F‑03 scenarios were executed: refresh with active chat, after last message, on empty chat, after long history, after error, and in a multi‑tab setup.   
-In every case, the conversation state and UI controls were restored correctly after browser refresh; no messages were lost or duplicated.  
-Error-handling was validated by forcing an error, then refreshing and confirming that the UI returned to a normal, usable state without residual banners.  
-Multi‑tab checks confirmed that each tab maintained its own session data after refresh; no cross‑tab contamination or mix‑up was observed.  
-No bugs were identified for F‑03 in this run; results are ready to be referenced in the Test Summary Report and used as regression coverage for future builds.  
-
 ---
 
 ## ⚠️ Risks & Critical Checks
@@ -98,6 +90,14 @@ No bugs were identified for F‑03 in this run; results are ready to be referenc
 ✅ UI state → Day/Night mode preserved  
 ✅ Ready for new message immediately  
 
+---
+## 📝 Test Execution Notes
+
+All F‑03 scenarios were executed: refresh with active chat, after last message, on empty chat, after long history, after error, and in a multi‑tab setup.   
+In every case, the conversation state and UI controls were restored correctly after browser refresh; no messages were lost or duplicated.  
+Error-handling was validated by forcing an error, then refreshing and confirming that the UI returned to a normal, usable state without residual banners.  
+Multi‑tab checks confirmed that each tab maintained its own session data after refresh; no cross‑tab contamination or mix‑up was observed.  
+No bugs were identified for F‑03 in this run; results are ready to be referenced in the Test Summary Report and used as regression coverage for future builds.  
   
 **Environment Notes**:
 * Closed beta - no screenshots
