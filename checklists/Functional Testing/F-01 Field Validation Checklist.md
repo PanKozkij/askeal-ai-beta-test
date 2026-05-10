@@ -1,11 +1,11 @@
 # F-01 Field Validation Checklist
 
 **Test Suite**: Functional Testing  
-**Priority**: High  <br>
-**Status**: ✅ Pass <br>
-**Tester**: Oleh Yushchenko <br> 
+**Priority**: High  
+**Status**: ✅ Pass   
+**Tester**: Oleh Yushchenko   
 **Date**: April 2026  
-**Browser**: Chrome 130+
+**Browser**: Chrome 130+  
 
 ---
 
@@ -84,15 +84,17 @@
 
 ## ⚠️ Risks & Notes
 
-🔴 CRITICAL: XSS vulnerability from special chars <br>
-🟡 Input sanitization may break Ukrainian text <br>
-🟠 No character counter → UX issue for long prompts <br>
-🟢 Spaces trimming behavior must be consistent <br>
+🔴 CRITICAL: XSS vulnerability from special chars  
+🟡 Input sanitization may break Ukrainian text  
+🟠 No character counter → UX issue for long prompts  
+🟢 Spaces trimming behavior must be consistent  
 
+---
 **Environment Notes**:
 
-Beta version tested
-No media (closed beta policy)
-Manual execution only
-Chrome DevTools used for timing
----
+* Beta version tested
+* No media (closed beta policy)
+* Manual execution only
+* Chrome DevTools used for timing
+
+
