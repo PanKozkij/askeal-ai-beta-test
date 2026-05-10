@@ -147,4 +147,11 @@
 - For **cross-language role clarity**, tested prompts in Ukrainian and Spanish asking about its role:
   - Bot replied in English and clearly stated that it is configured for English-only communication, while keeping a consistent description of its role and limitations.  
   - This behavior was treated as a **pass for role clarity** and as an indication that multilingual support is currently out of scope rather than a bug.
-- Overall, Q‑02 confirms that Askeal keeps a stable, appropriate role as a professional, informational assistant, aligned with the beta Terms of Use and the LLM quality goals in the Test Strategy.[file:2][file:35]
+- Overall, Q‑02 confirms that Askeal keeps a stable, appropriate role as a professional, informational assistant, aligned with the beta Terms of Use and the LLM quality goals in the Test Strategy
+
+**Environment Notes**:
+* Closed beta - no screenshots
+* Test files prepared locally
+* Chrome DevTools Network tab monitoring
+* Manual upload testing only
+
