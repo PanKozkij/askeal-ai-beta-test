@@ -66,11 +66,11 @@
 ---
 
 ## ⚠️ Risks & Critical Checks
-🔴 Broken UX after failure <br>
-🔴 User input lost after error <br>
-🔴 No retry option <br>
-🔴 Infinite loading state <br>
-🟡 Unclear error messaging <br>
+🔴 Broken UX after failure  
+🔴 User input lost after error  
+🔴 No retry option  
+🔴 Infinite loading state  
+🟡 Unclear error messaging  
 
 
 ## ✅ Expected Behavior
@@ -92,3 +92,10 @@
 - After restoring connectivity or service, re‑sending the same prompts worked as expected and automatically cleared previous error banners/messages.  
 - Cross‑browser checks (Chrome plus another supported browser) showed consistent error messaging and no layout issues with banners or alerts.  
 - No defects were identified for F‑10 in this run; results can be included in the Test Summary Report and used as regression coverage for error‑handling flows.
+
+**Environment Notes**:
+* Closed beta - no screenshots
+* Test files prepared locally
+* Chrome DevTools Network tab monitoring
+* Manual upload testing only
+
