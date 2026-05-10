@@ -66,10 +66,10 @@
 ---
 
 ## ⚠️ Risks & Critical Checks
-🔴 CRITICAL: Context loss = core chatbot failure <br>
-🔴 CRITICAL: Repetition loops <br>
-🟡 Name confusion (user1 vs user2) <br>
-🟢 Topic switching too slow <br>
+🔴 CRITICAL: Context loss = core chatbot failure  
+🔴 CRITICAL: Repetition loops  
+🟡 Name confusion (user1 vs user2)  
+🟢 Topic switching too slow  
 
 
 ## ✅ Expected Behavior
@@ -89,3 +89,10 @@
 - Tested the **New Howl** reset behavior to confirm that previous context was cleared and the next conversation started cleanly.  
 - Confirmed stable behavior with short messages, longer messages, multiple topics, and abrupt topic changes.  
 - No bugs were found for Q‑01 in this run; results are ready for the Test Summary Report and future regression coverage.
+
+**Environment Notes**:
+* Closed beta - no screenshots
+* Test files prepared locally
+* Chrome DevTools Network tab monitoring
+* Manual upload testing only
+
