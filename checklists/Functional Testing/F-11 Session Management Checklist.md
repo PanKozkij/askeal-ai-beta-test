@@ -63,16 +63,17 @@
 
 **Overall Result**: All F‑11 checklist scenarios were executed and passed.  
 **Bugs**: No defects were found during this run.
+
 ---
 
 ## ⚠️ Risks & Critical Checks
-🔴 Session data loss <br>
-🔴 Cross-tab sync issues <br>
-🔴 Unexpected logout <br>
-🔴 Conversation leak between users <br>
-🟡 Broken restoration after refresh <br>
+🔴 Session data loss  
+🔴 Cross-tab sync issues  
+🔴 Unexpected logout  
+🔴 Conversation leak between users  
+🟡 Broken restoration after refresh  
 
-
+---
 ## ✅ Expected Behavior
 
 ✅ The session remains usable during normal idle periods and does not break unexpectedly while the user pauses.  
@@ -89,3 +90,10 @@
 - Refreshed the page and reopened the browser to confirm that session handling remained consistent and did not cause message loss or unexpected logout.  
 - Multi-tab checks confirmed that session state stayed isolated per tab, with no cross-tab confusion or unintended sharing.  
 - No functional defects were found for F‑11 in this run; results are suitable for the Test Summary Report and for future regression testing of session behavior.
+
+**Environment Notes**:
+* Closed beta - no screenshots
+* Test files prepared locally
+* Chrome DevTools Network tab monitoring
+* Manual upload testing only
+
