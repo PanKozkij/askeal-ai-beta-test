@@ -74,13 +74,13 @@
 ---
 
 ## ⚠️ Risks & Critical Checks
-🔴 Browser-specific layout bug <br>
-🔴 File upload mismatch  <br>
-🔴 Refresh/session inconsistency <br>
-🟡 Safari rendering differences <br>
-🟢 Missing support for older browsers <br>
+🔴 Browser-specific layout bug  
+🔴 File upload mismatch   
+🔴 Refresh/session inconsistency  
+🟡 Safari rendering differences  
+🟢 Missing support for older browsers  
 
-
+---
 ## ✅ Expected Behavior
 
 ✅ Askeal AI works in all supported browsers listed in the plan: **Chrome, Firefox, and Safari**.  
@@ -98,3 +98,10 @@
 - Confirmed that there were no major visual regressions such as broken layout, overlapping elements, or unreadable text in the tested browsers.  
 - Where browser differences existed, they were minor and did not affect usability or core flow completion.  
 - No defects were found for F‑12 in this run; the results are suitable for inclusion in the final Test Summary Report and for future browser regression checks.
+
+**Environment Notes**:
+* Closed beta - no screenshots
+* Test files prepared locally
+* Chrome DevTools Network tab monitoring
+* Manual upload testing only
+
