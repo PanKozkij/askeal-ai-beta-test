@@ -2,7 +2,7 @@
 
 **Test Suite**: Functional Testing  
 **Priority**: High  
-**Status**: ✅ Pass <br> 
+**Status**: ✅ Pass  
 **Tester**: Oleh Yushchenko  
 **Date**: April 2026  
 **Browser**: Chrome 130+
@@ -79,10 +79,10 @@
 ---
 
 ## ⚠️ Risks & Critical Checks
-🔴 CRITICAL: New howl doesn't appear in recent list <br>
-🔴 CRITICAL: Wrong howl loads on click <br>
-🟡 Preview doesn't update with first message <br>
-🟢 Pagination for 10+ howls <br>
+🔴 CRITICAL: New howl doesn't appear in recent list  
+🔴 CRITICAL: Wrong howl loads on click  
+🟡 Preview doesn't update with first message  
+🟢 Pagination for 10+ howls  
 
 ---
 
@@ -104,3 +104,10 @@
 - Confirmed integration with F‑06: each newly created howl appeared correctly in the Recent Howls list and opened the proper conversation when clicked.  
 - Performed at least one cross‑browser check (Chrome plus another browser) to ensure the New Howl behavior and layout were consistent.  
 - No issues were found for F‑07 in this run; this flow can be marked as **passed** in the Test Summary Report and included in future regression coverage.
+
+  **Environment Notes**:
+* Closed beta - no screenshots
+* Test files prepared locally
+* Chrome DevTools Network tab monitoring
+* Manual upload testing only
+
