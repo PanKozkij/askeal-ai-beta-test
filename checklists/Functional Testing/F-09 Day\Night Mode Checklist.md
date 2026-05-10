@@ -141,3 +141,10 @@
 - Validated interaction with other features (file upload dialogs, error banners, recent howls, footer links) to ensure they respect the current theme colors.  
 - Performed rapid toggling and long conversations while toggling to confirm there were no crashes, layout jumps, or performance issues.  
 - Cross‑browser tests (Chrome plus at least one additional browser) showed consistent behavior and appearance; no theme‑related bugs were observed for F‑09 in this run.
+
+**Environment Notes**:
+* Closed beta - no screenshots
+* Test files prepared locally
+* Chrome DevTools Network tab monitoring
+* Manual upload testing only
+
