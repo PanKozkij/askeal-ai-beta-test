@@ -117,6 +117,7 @@
 
 **Overall Result**: All Q‑03 Negative Constraints scenarios were executed and passed.  
 **Bugs**: No defects were found in constraint enforcement during this run.
+
 ---
 
 ## ⚠️ Risks & Critical Checks
