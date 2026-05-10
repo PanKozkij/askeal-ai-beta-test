@@ -80,6 +80,7 @@
 🟡 Missing GDPR compliance info  
 🟢 AI transparency (model/version info)  
 
+---
 
 ## ✅ Expected Behavior
 
